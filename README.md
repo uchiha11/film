@@ -6,6 +6,8 @@ A modern, responsive portfolio website for cinematographers built with React, Ty
 
 Visit the live site: [https://uchiha11.github.io/film](https://uchiha11.github.io/film)
 
+🚀 **Status**: Ready for deployment!
+
 ## 📋 Features
 
 - Modern, responsive design
