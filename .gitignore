@@ -6,12 +6,11 @@ node_modules
 # Testing
 /coverage
 
-# Next.js
-/.next/
-/out/
-
-# Production
+# React build
 /build
+
+# Next.js build output
+/out
 
 # Misc
 .DS_Store
@@ -25,9 +24,19 @@ yarn-error.log*
 # Local env files
 .env*.local
 
-# Vercel
-.vercel
-
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache directories
+.cache/
+*.cache

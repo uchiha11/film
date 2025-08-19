@@ -1,44 +1,8 @@
-'use client'
-
-import { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
-import { Play, Pause, Volume2, VolumeX, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 const HeroSection = () => {
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(true)
-  const [isMuted, setIsMuted] = useState(true)
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (video) {
-      video.play().catch(() => {
-        // Autoplay failed, which is expected in many browsers
-        setIsPlaying(false)
-      })
-    }
-  }, [])
-
-  const togglePlay = () => {
-    const video = videoRef.current
-    if (video) {
-      if (isPlaying) {
-        video.pause()
-      } else {
-        video.play()
-      }
-      setIsPlaying(!isPlaying)
-    }
-  }
-
-  const toggleMute = () => {
-    const video = videoRef.current
-    if (video) {
-      video.muted = !isMuted
-      setIsMuted(!isMuted)
-    }
-  }
 
   const scrollToNext = () => {
     const aboutSection = document.querySelector('#about')
@@ -51,23 +15,14 @@ const HeroSection = () => {
     <section id="home" className="relative h-screen overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
-        <video
-          ref={videoRef}
+        <iframe
           className="w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          onLoadedData={() => setIsVideoLoaded(true)}
-          onError={() => console.log('Video failed to load')}
-          poster="https://img.youtube.com/vi/1Jk25_Gpnqw/maxresdefault.jpg"
-        >
-          <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-          {/* Fallback for browsers that don't support video */}
-          Your browser does not support the video tag.
-        </video>
+          src="https://www.youtube.com/embed/41W7sRc5wps?autoplay=1&mute=1&loop=1&playlist=41W7sRc5wps&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&start=5&end=15"
+          title="Background Video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
         
         {/* Video Overlay */}
         <div className="absolute inset-0 video-overlay" />
@@ -136,33 +91,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Video Controls */}
-      {isVideoLoaded && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-8 left-8 flex gap-4 z-20"
-        >
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={togglePlay}
-            className="bg-cinematic-black/50 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/20 transition-all duration-300"
-          >
-            {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-          </motion.button>
-          
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={toggleMute}
-            className="bg-cinematic-black/50 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/20 transition-all duration-300"
-          >
-            {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-          </motion.button>
-        </motion.div>
-      )}
 
       {/* Scroll Indicator */}
       <motion.div

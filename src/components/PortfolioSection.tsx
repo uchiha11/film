@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -31,8 +29,8 @@ const PortfolioSection = () => {
       category: 'Videos',
       year: '2024',
       description: 'A showcase of cinematic storytelling and visual excellence through dynamic camera work.',
-      image: 'https://img.youtube.com/vi/1Jk25_Gpnqw/maxresdefault.jpg',
-      video: '1Jk25_Gpnqw',
+      image: 'https://img.youtube.com/vi/X-MZXIXPwFw/maxresdefault.jpg',
+      video: 'X-MZXIXPwFw',
       client: 'Creative Studio'
     },
     {

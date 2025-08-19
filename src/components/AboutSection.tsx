@@ -1,8 +1,6 @@
-'use client'
-
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Award, Camera, Film, Users } from 'lucide-react'
+import { Camera, Film, Users } from 'lucide-react'
 
 const AboutSection = () => {
   const [ref, inView] = useInView({
