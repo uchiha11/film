@@ -12,7 +12,6 @@ const AboutSection = () => {
 
   const stats = [
     { icon: Film, number: '50+', label: 'Projects Completed' },
-    { icon: Award, number: '15+', label: 'Awards Won' },
     { icon: Users, number: '100+', label: 'Happy Clients' },
     { icon: Camera, number: '8+', label: 'Years Experience' },
   ]
@@ -78,12 +77,6 @@ const AboutSection = () => {
                   Specializing in narrative films, commercials, and music videos, I believe that every frame 
                   should serve the story. My approach combines technical expertise with artistic vision, 
                   ensuring that each project not only looks stunning but also resonates with its audience.
-                </p>
-                
-                <p>
-                  When I'm not behind the camera, you'll find me exploring new technologies, studying the 
-                  masters of cinema, or collaborating with fellow creatives to push the boundaries of 
-                  visual storytelling.
                 </p>
               </motion.div>
             </div>

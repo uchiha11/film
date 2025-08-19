@@ -55,12 +55,15 @@ const HeroSection = () => {
           ref={videoRef}
           className="w-full h-full object-cover"
           autoPlay
-          muted={isMuted}
+          muted
           loop
           playsInline
           onLoadedData={() => setIsVideoLoaded(true)}
-          poster="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+          onError={() => console.log('Video failed to load')}
+          poster="https://img.youtube.com/vi/1Jk25_Gpnqw/maxresdefault.jpg"
         >
+          <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
           <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
           {/* Fallback for browsers that don't support video */}
           Your browser does not support the video tag.
@@ -84,7 +87,7 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="text-6xl md:text-8xl font-display font-bold mb-6 text-gradient"
           >
-            John Doe
+            Abishek Ranganathan
           </motion.h1>
           
           <motion.p
@@ -93,7 +96,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 font-light tracking-wide"
           >
-            Cinematographer & Visual Storyteller
+            Cinematographer
           </motion.p>
           
           <motion.p

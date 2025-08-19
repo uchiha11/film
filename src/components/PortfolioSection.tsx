@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { X, Play, ExternalLink, Calendar, Award } from 'lucide-react'
+import { X, Play, ExternalLink, Calendar } from 'lucide-react'
 
 interface Project {
   id: number
@@ -13,7 +13,6 @@ interface Project {
   description: string
   image: string
   video?: string
-  awards?: string[]
   client: string
 }
 
@@ -28,67 +27,80 @@ const PortfolioSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Midnight Dreams',
-      category: 'Narrative Film',
+      title: 'Cinematic Reel 1',
+      category: 'Videos',
       year: '2024',
-      description: 'A noir-inspired short film exploring themes of memory and identity through cinematic storytelling.',
-      image: 'https://images.unsplash.com/photo-1489599904472-84b0e19e8b37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      video: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-      awards: ['Best Cinematography - Indie Film Festival 2024'],
-      client: 'Independent Production'
+      description: 'A showcase of cinematic storytelling and visual excellence through dynamic camera work.',
+      image: 'https://img.youtube.com/vi/1Jk25_Gpnqw/maxresdefault.jpg',
+      video: '1Jk25_Gpnqw',
+      client: 'Creative Studio'
     },
     {
       id: 2,
-      title: 'Urban Pulse',
-      category: 'Commercial',
+      title: 'Cinematic Reel 2',
+      category: 'Videos',
       year: '2024',
-      description: 'High-energy commercial showcasing the vibrant city life with dynamic camera movements and lighting.',
-      image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      client: 'Nike'
+      description: 'High-energy visual storytelling with innovative lighting techniques and composition.',
+      image: 'https://img.youtube.com/vi/KXFo2hQipgs/maxresdefault.jpg',
+      video: 'KXFo2hQipgs',
+      client: 'Film Production'
     },
     {
       id: 3,
-      title: 'Echoes',
-      category: 'Music Video',
+      title: 'Cinematic Reel 3',
+      category: 'Videos',
       year: '2023',
-      description: 'Atmospheric music video combining practical effects with innovative lighting techniques.',
-      image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      awards: ['MTV Video Music Award Nomination'],
-      client: 'Universal Music'
+      description: 'Atmospheric cinematography combining practical effects with artistic vision.',
+      image: 'https://img.youtube.com/vi/kpPDGftkT4U/maxresdefault.jpg',
+      video: 'kpPDGftkT4U',
+      client: 'Media House'
     },
     {
       id: 4,
-      title: 'The Last Light',
-      category: 'Narrative Film',
+      title: 'Cinematic Reel 4',
+      category: 'Videos',
       year: '2023',
-      description: 'Post-apocalyptic drama focusing on human connection in isolation.',
-      image: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      client: 'A24 Films'
+      description: 'Creative visual narrative showcasing advanced cinematographic techniques.',
+      image: 'https://img.youtube.com/vi/c3Y_BjV1yEA/maxresdefault.jpg',
+      video: 'c3Y_BjV1yEA',
+      client: 'Production House'
     },
     {
       id: 5,
-      title: 'Luxury Redefined',
-      category: 'Commercial',
-      year: '2023',
-      description: 'Elegant commercial for luxury brand emphasizing sophistication and craftsmanship.',
-      image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      client: 'Rolex'
+      title: 'Cinematic Reel 5',
+      category: 'Videos',
+      year: '2022',
+      description: 'Innovative storytelling through compelling visual composition and lighting.',
+      image: 'https://img.youtube.com/vi/VtOjN2KJ3NI/maxresdefault.jpg',
+      video: 'VtOjN2KJ3NI',
+      client: 'Independent Film'
     },
     {
       id: 6,
-      title: 'Neon Nights',
-      category: 'Music Video',
+      title: 'Cinematic Reel 6',
+      category: 'Videos',
       year: '2022',
-      description: 'Cyberpunk-inspired music video with neon aesthetics and futuristic visuals.',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      client: 'Sony Music'
+      description: 'Masterful cinematography showcasing artistic vision and technical excellence.',
+      image: 'https://img.youtube.com/vi/41W7sRc5wps/maxresdefault.jpg',
+      video: '41W7sRc5wps',
+      client: 'Creative Agency'
+    },
+    {
+      id: 7,
+      title: 'Commercial Project',
+      category: 'Commercial',
+      year: '2024',
+      description: 'Professional commercial cinematography showcasing brand storytelling and visual impact.',
+      image: 'https://img.youtube.com/vi/-yLYGrDMhoI/maxresdefault.jpg',
+      video: '-yLYGrDMhoI',
+      client: 'Brand Agency'
     },
   ]
 
-  const categories = ['All', 'Narrative Film', 'Commercial', 'Music Video']
+  const categories = ['All', 'Videos', 'Commercial']
   
-  const filteredProjects = filter === 'All' 
-    ? projects 
+  const filteredProjects = filter === 'All'
+    ? projects
     : projects.filter(project => project.category === filter)
 
   const openLightbox = (project: Project) => {
@@ -134,7 +146,7 @@ const PortfolioSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12"
           >
-            A selection of my most impactful work across narrative films, commercials, and music videos.
+            A selection of my most impactful work showcasing cinematic storytelling and visual excellence across videos and commercials.
           </motion.p>
 
           {/* Filter Buttons */}
@@ -256,14 +268,14 @@ const PortfolioSection = () => {
               {/* Project Media */}
               <div className="relative">
                 {selectedProject.video ? (
-                  <video
-                    controls
-                    autoPlay
-                    className="w-full aspect-video object-cover"
-                    poster={selectedProject.image}
-                  >
-                    <source src={selectedProject.video} type="video/mp4" />
-                  </video>
+                  <iframe
+                    className="w-full aspect-video"
+                    src={`https://www.youtube.com/embed/${selectedProject.video}?autoplay=0&mute=1&controls=1&showinfo=0&rel=0&modestbranding=1`}
+                    title={selectedProject.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
                 ) : (
                   <img
                     src={selectedProject.image}
@@ -294,19 +306,6 @@ const PortfolioSection = () => {
                   {selectedProject.description}
                 </p>
 
-                {selectedProject.awards && (
-                  <div className="border-t border-white/20 pt-6">
-                    <div className="flex items-center mb-3">
-                      <Award className="text-white mr-2" size={20} />
-                      <span className="text-white font-semibold">Awards & Recognition</span>
-                    </div>
-                    <ul className="text-gray-300">
-                      {selectedProject.awards.map((award, index) => (
-                        <li key={index} className="mb-1">• {award}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
             </motion.div>
           </motion.div>

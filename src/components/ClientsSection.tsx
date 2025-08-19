@@ -10,14 +10,10 @@ const ClientsSection = () => {
   })
 
   const clients = [
-    { name: 'Netflix', logo: 'https://via.placeholder.com/120x60/d4af37/000000?text=NETFLIX' },
-    { name: 'A24', logo: 'https://via.placeholder.com/120x60/d4af37/000000?text=A24' },
-    { name: 'Nike', logo: 'https://via.placeholder.com/120x60/d4af37/000000?text=NIKE' },
-    { name: 'Apple', logo: 'https://via.placeholder.com/120x60/d4af37/000000?text=APPLE' },
-    { name: 'Sony Music', logo: 'https://via.placeholder.com/120x60/d4af37/000000?text=SONY' },
-    { name: 'Universal', logo: 'https://via.placeholder.com/120x60/d4af37/000000?text=UNIVERSAL' },
-    { name: 'HBO', logo: 'https://via.placeholder.com/120x60/d4af37/000000?text=HBO' },
-    { name: 'Rolex', logo: 'https://via.placeholder.com/120x60/d4af37/000000?text=ROLEX' },
+    { name: 'Netflix', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png' },
+    { name: 'Nike', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png' },
+    { name: 'Sony Pictures', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Sony_Pictures_Television_logo.svg/2560px-Sony_Pictures_Television_logo.svg.png' },
+    { name: 'Warner Bros', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Warner_Bros_logo.svg/2560px-Warner_Bros_logo.svg.png' },
   ]
 
 
@@ -94,7 +90,7 @@ const ClientsSection = () => {
             Trusted by Industry Leaders
           </motion.h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {clients.map((client, index) => (
               <motion.div
                 key={client.name}

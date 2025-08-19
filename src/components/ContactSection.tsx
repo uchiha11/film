@@ -14,20 +14,20 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@johndoe.com',
-      href: 'mailto:hello@johndoe.com',
+      value: 'abi.ranga@me.com',
+      href: 'mailto:abi.ranga@me.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+91 7477757779',
+      href: 'tel:+917477757779',
     },
     {
       icon: Instagram,
       label: 'Instagram',
-      value: '@johndoe_cinematographer',
-      href: 'https://instagram.com/johndoe_cinematographer',
+      value: '@abishekranganathan_creations',
+      href: 'https://instagram.com/abishekranganathan_creations',
     },
   ]
 

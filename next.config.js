@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  output: 'export',
+  trailingSlash: true,
   images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    unoptimized: true,
+    domains: ['images.unsplash.com', 'via.placeholder.com', 'img.youtube.com', 'upload.wikimedia.org', '1000logos.net', 'logos-world.net'],
   },
+  // basePath: '/film',
+  // assetPrefix: '/film/',
 }
 
 module.exports = nextConfig

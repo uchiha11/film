@@ -53,7 +53,7 @@ const Navigation = () => {
             className="text-2xl font-display font-bold text-gradient cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
-            John Doe
+            Abishek Ranganathan
           </motion.div>
 
           {/* Desktop Navigation */}

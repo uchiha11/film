@@ -13,23 +13,27 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'John Doe - Cinematographer',
+  title: 'Abishek Ranganathan - Cinematographer',
   description: 'Award-winning cinematographer specializing in narrative films, commercials, and music videos. Bringing stories to life through cinematic vision.',
   keywords: 'cinematographer, director of photography, film, video production, visual storytelling',
-  authors: [{ name: 'John Doe' }],
+  authors: [{ name: 'Abishek Ranganathan' }],
   openGraph: {
-    title: 'John Doe - Cinematographer',
+    title: 'Abishek Ranganathan - Cinematographer',
     description: 'Award-winning cinematographer bringing stories to life through cinematic vision.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'John Doe - Cinematographer',
+    title: 'Abishek Ranganathan - Cinematographer',
     description: 'Award-winning cinematographer bringing stories to life through cinematic vision.',
   },
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
