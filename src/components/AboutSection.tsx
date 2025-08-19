@@ -9,8 +9,8 @@ const AboutSection = () => {
   })
 
   const stats = [
-    { icon: Film, number: '50+', label: 'Projects Completed' },
-    { icon: Users, number: '100+', label: 'Happy Clients' },
+    { icon: Film, number: '15+', label: 'Projects Completed' },
+    { icon: Users, number: '50+', label: 'Happy Clients' },
     { icon: Camera, number: '8+', label: 'Years Experience' },
   ]
 
@@ -66,15 +66,20 @@ const AboutSection = () => {
               
               <motion.div variants={itemVariants} className="space-y-6 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  I'm a passionate cinematographer with over 8 years of experience in visual storytelling. 
-                  My journey began with a simple fascination for how light and shadow could evoke emotion, 
-                  and it has evolved into a career dedicated to bringing stories to life through the lens.
+                  I'm a passionate cinematographer and director of photography based in Chennai, Tamil Nadu, with over 8 years of experience in visual storytelling.
+                  My journey began with a simple fascination for how light and shadow could evoke emotion,
+                  and it has evolved into a career dedicated to bringing stories to life through the lens across South India.
                 </p>
                 
                 <p>
-                  Specializing in narrative films, commercials, and music videos, I believe that every frame 
-                  should serve the story. My approach combines technical expertise with artistic vision, 
-                  ensuring that each project not only looks stunning but also resonates with its audience.
+                  Specializing in narrative films, commercials, music videos, corporate videos, and wedding cinematography in Chennai and throughout Tamil Nadu,
+                  I believe that every frame should serve the story. My film production company combines technical expertise with artistic vision,
+                  ensuring that each project not only looks stunning but also resonates with its audience while capturing the essence of local culture and storytelling.
+                </p>
+                
+                <p>
+                  From intimate documentaries to large-scale commercial productions, I work with clients across Chennai's vibrant film industry,
+                  delivering professional cinematography services that meet international standards while celebrating the rich visual heritage of Tamil cinema.
                 </p>
               </motion.div>
             </div>

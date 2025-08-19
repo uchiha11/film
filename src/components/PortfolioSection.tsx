@@ -26,18 +26,18 @@ const PortfolioSection = () => {
     {
       id: 1,
       title: 'Cinematic Reel 1',
-      category: 'Videos',
+      category: 'Music Video',
       year: '2024',
       description: 'A showcase of cinematic storytelling and visual excellence through dynamic camera work.',
       image: 'https://img.youtube.com/vi/X-MZXIXPwFw/maxresdefault.jpg',
       video: 'X-MZXIXPwFw',
-      client: 'Creative Studio'
+      client: 'Sony Music South'
     },
     {
       id: 2,
       title: 'Cinematic Reel 2',
-      category: 'Videos',
-      year: '2024',
+      category: 'Reel',
+      year: '2022',
       description: 'High-energy visual storytelling with innovative lighting techniques and composition.',
       image: 'https://img.youtube.com/vi/KXFo2hQipgs/maxresdefault.jpg',
       video: 'KXFo2hQipgs',
@@ -46,56 +46,86 @@ const PortfolioSection = () => {
     {
       id: 3,
       title: 'Cinematic Reel 3',
-      category: 'Videos',
-      year: '2023',
+      category: 'Music Video',
+      year: '2022',
       description: 'Atmospheric cinematography combining practical effects with artistic vision.',
       image: 'https://img.youtube.com/vi/kpPDGftkT4U/maxresdefault.jpg',
       video: 'kpPDGftkT4U',
-      client: 'Media House'
+      client: 'Yuvan Shankar Raja'
     },
     {
       id: 4,
       title: 'Cinematic Reel 4',
-      category: 'Videos',
+      category: 'Music Video',
       year: '2023',
       description: 'Creative visual narrative showcasing advanced cinematographic techniques.',
       image: 'https://img.youtube.com/vi/c3Y_BjV1yEA/maxresdefault.jpg',
       video: 'c3Y_BjV1yEA',
-      client: 'Production House'
+      client: 'Yuvan Shankar Raja'
     },
     {
       id: 5,
       title: 'Cinematic Reel 5',
-      category: 'Videos',
+      category: 'Music Video',
       year: '2022',
       description: 'Innovative storytelling through compelling visual composition and lighting.',
       image: 'https://img.youtube.com/vi/VtOjN2KJ3NI/maxresdefault.jpg',
       video: 'VtOjN2KJ3NI',
-      client: 'Independent Film'
+      client: 'Yuvan Shankar Raja'
     },
     {
       id: 6,
       title: 'Cinematic Reel 6',
-      category: 'Videos',
-      year: '2022',
+      category: 'Music Video',
+      year: '2023',
       description: 'Masterful cinematography showcasing artistic vision and technical excellence.',
       image: 'https://img.youtube.com/vi/41W7sRc5wps/maxresdefault.jpg',
       video: '41W7sRc5wps',
-      client: 'Creative Agency'
+      client: 'Yuvan Shankar Raja'
     },
     {
       id: 7,
       title: 'Commercial Project',
       category: 'Commercial',
-      year: '2024',
+      year: '2022',
       description: 'Professional commercial cinematography showcasing brand storytelling and visual impact.',
       image: 'https://img.youtube.com/vi/-yLYGrDMhoI/maxresdefault.jpg',
       video: '-yLYGrDMhoI',
-      client: 'Brand Agency'
+      client: 'Dr.Ashwin Vijay'
+    },
+    {
+      id: 8,
+      title: 'Commercial Project',
+      category: 'Commercial',
+      year: '2022',
+      description: 'Artistic cinematography showcasing creative visual storytelling and atmospheric composition.',
+      image: 'https://img.youtube.com/vi/Elj7DhyDG7A/maxresdefault.jpg',
+      video: 'Elj7DhyDG7A',
+      client: 'KKix customs'
+    },
+    {
+      id: 9,
+      title: 'Dynamic Storytelling',
+      category: 'Music Video',
+      year: '2024',
+      description: 'Compelling visual narrative with innovative camera work and cinematic excellence.',
+      image: 'https://img.youtube.com/vi/0rDPTm-ePp0/maxresdefault.jpg',
+      video: '0rDPTm-ePp0',
+      client: 'Vijay Varma'
+    },
+    {
+      id: 10,
+      title: 'Visual Masterpiece',
+      category: 'Music Video',
+      year: '2025',
+      description: 'Masterful cinematography combining technical precision with artistic vision.',
+      image: 'https://img.youtube.com/vi/2gkVOt3Lrvk/maxresdefault.jpg',
+      video: '2gkVOt3Lrvk',
+      client: 'Raaja Belmir'
     },
   ]
 
-  const categories = ['All', 'Videos', 'Commercial']
+  const categories = ['All', 'Music Video', 'Commercial', 'Reel']
   
   const filteredProjects = filter === 'All'
     ? projects
